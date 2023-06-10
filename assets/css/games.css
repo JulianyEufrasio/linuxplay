@@ -1,0 +1,293 @@
+/* variables */
+:root{
+    --main-color: #FF89D8;
+    --sec-color: #1B1464;
+    --third-color: #606060b7;
+    --text-color: #161621;
+    --hover: #1967FF;
+}
+
+body{
+    background-color: var(--main-color);
+    display: grid;
+    grid-template-columns: 3fr;
+    align-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+/* Game : Quiz */
+.quizbox, .gs-box,.dic-box{
+    background-color: #fafafa;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto;
+    border-radius: 12px;
+    padding: 2.3rem;
+}
+.quizbox h1, .gs-box h1,.dic-box h1{
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.7rem;
+}
+.quiz{
+    padding: 1rem 0;
+}
+.quiz h2{
+    font-size: 1.2rem;
+    margin-bottom: 1%;
+    text-align: center;
+    font-weight: 400;
+}
+.btn-quiz{
+    background-color: #fafafa;
+    color: var(--text-color);
+    width: 100%;
+    border: 1px solid var(--text-color);
+    padding: .8rem;
+    margin: .8rem 0;
+    text-align: left;
+    border-radius: 4px;
+    transition: all .4s;
+    cursor: pointer;
+}
+.btn-quiz:hover:not([disabled]){
+    background-color: var(--sec-color);
+    color: #fafafa;
+}
+.btn-quiz:disabled{
+    cursor: no-drop;
+}
+#next{
+    display: block;
+    background-color: var(--hover);
+    color: #fafafa;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    padding: .8rem;
+    margin: 1.2rem auto 0;
+    cursor: pointer;
+}
+.correct{
+    background-color: #9af09a;
+}
+.incorrect{
+    background-color: #f09797;
+}
+.img-win{
+    width: 100%;
+    max-width: 250px;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Game : Hangman */
+.gs-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1.5rem;
+}
+.gs-box h1 span{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+.inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.inputs input{
+    height: 50px;
+    width: 50px;
+    margin: 4px;
+    background-color: #fafafa;
+    border: 0;
+    border: 1px solid var(--third-color);
+    border-radius: 4px;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--hover);
+    text-align: center;
+}
+.inputs input:first-child{
+    margin-left: 0px;
+}
+#trick, #wrong-lt{
+    font-weight: 500;
+    text-align: center;
+}
+#trick{ 
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.btns-bt{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    align-content: center;
+    gap: .5rem;
+}
+.btns-bt button{
+    display: block;
+    background-color: var(--hover);
+    color: #fafafa;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+    padding: .8rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.btns-bt .next{
+    background-color: var(--sec-color);
+}
+
+/* Game : Dic */
+.dic-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.dic-box h1{
+    margin-bottom: 3rem;
+}
+#search-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+#search-bar input{
+    width: 70%;
+    outline: none;
+    padding: .3rem;
+    border: 0;
+    border-bottom: 3px solid var(--hover);
+    background-color: #fafafa;
+    font-size: 1rem;
+}
+#search-bar input::placeholder{
+    color: #1616215a;
+}
+#search-bar button{
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    background-color: var(--hover);
+    color: #fafafa;
+    padding: .3rem;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+}
+#command-details {
+    margin-top: 20px;
+}
+#command-details h3 {
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 4px;
+}
+#command-details #meaning{
+    text-align: left;
+    font-size: .90rem;
+    color: #161621d0;
+
+    border-left: 5px solid var(--hover);
+    padding-left: 10px;
+    margin-top: 20px;
+}
+#command-details #options{
+    padding-top: .3rem;
+    font-size: .90rem;
+    text-align: left;
+    font-size: .90rem;
+    color: #161621d0;
+    border-left: 5px solid var(--hover);
+    padding-left: 10px;
+}
+#command-details #details {
+    text-align: left;
+    font-size: .90rem;
+    font-weight: 500;
+    color: #16162177;
+    margin-bottom: 1rem;
+}
+#suggestions {
+    position: absolute;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: none;
+}
+#suggestions div {
+    padding: 5px;
+  cursor: pointer;
+}
+#suggestions div:hover {
+    background-color: #e9e9e9;
+}
+  
+
+
+
+
+
+/* responsive */
+@media screen and (max-width: 768px){
+    .gs-box{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 670px){
+    body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .bx-chevron-left{
+        position: relative;
+        top: 30px;
+        right: 130px;
+    }
+    .gs-box{
+        width: 70%;
+    }
+    .quizbox h1, .gs-box h1{
+        font-size: 1.5rem;
+        text-align: center;
+        color: var(--text-color);
+    }
+    .gs-content{
+        padding: 1rem;
+        gap: 1rem;
+    }
+    .inputs input{
+        height: 30px;
+        width: 30px;
+        font-size: 1rem;
+    }
+    #trick{ 
+        font-size: 1rem;
+    }
+    .btns-bt{
+        grid-template-columns: 1fr;
+    }
+    .btns-bt button{
+        width: 150px;
+        padding: .6rem;
+    }
+}

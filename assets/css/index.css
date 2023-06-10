@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500;600;700;800;900&display=swap');
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none; 
+}
+img{
+    width: 100%;
+}
+section{
+    padding: 60px 12%;
+    width: 100%;
+}
+.bx-chevron-left{
+    font-size: 2rem;
+    color: #fafafa;
+    padding-left: 8%;
+}
+
+/* variables */
+:root{
+    --main-color: #FF89D8;
+    --sec-color: #1B1464;
+    --third-color: #606060b7;
+    --text-color: #161621;
+    --hover: #1967FF;
+}
+*::selection{
+    background-color: #ff89d883;
+}
+
+/* navbar */
+nav{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #fff;
+    padding: 30px 12%;
+    transition: 0.2s;
+}
+nav .logo{
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+nav .logo span{
+    font-size: .95rem;
+    color: var(--third-color);
+    font-weight: 400;
+}
+nav .navbar{
+    display: flex;
+}
+nav .navbar a{
+    color: var(--third-color);
+    font-size: 1.2rem;
+    padding: 10px 25px;
+    font-weight: 500;
+    transition: .5s;
+}
+nav .navbar .act{
+    color: var(--hover);
+    font-weight: 600;
+}
+nav .navbar a:hover{
+    color: var(--text-color);
+}
+#bx-menu{
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+/* main */
+.main-content{
+    min-height: 100vh;
+    color: var(--text-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1.5fr);
+    align-items: center;
+    gap: 1.5rem;
+}
+.text-wc{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    /* align-items: center; */
+}
+.text-wc h2{
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 3rem;
+    word-spacing: .3rem;
+}
+.text-wc h2 span{
+    color: var(--main-color);
+}
+.text-wc p{
+    text-align: justify;
+    font-size: 1.3rem;
+    color: #010101cd;
+}
+.text-wc .btn-wc{
+    display:flex;
+    gap: 1rem;
+}
+.text-wc .btn-wc .btn-how{
+    width: 100%;
+    max-width: 200px;
+    height: 54px;
+    padding: 10px 24px;
+    border-radius: 12px;
+    background-color: var(--hover);
+    border: none;
+    border-color: transparent;
+    transition: .5s;
+}
+
+.text-wc .btn-wc .btn-how a{     
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+.text-wc .btn-wc .btn-play{
+    width: 100%;
+    max-width: 54px;
+    height: 54px;
+    border: none;
+}
+.text-wc .btn-wc .btn-play img{
+    width: 54px;
+    height: 54px;
+}
+
+/* footer */
+.footer{
+    background-color: #161616;
+    color: #fafafa;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    align-content: center;
+    gap: 2rem;
+}
+.footer .aluno p{
+    font-size: 1rem;
+    font-weight: 300;
+    text-align: justify;
+    width: 100%;
+    max-width: 50vh;
+}
+.footer .contato{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+.footer .contato .ct{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+.footer .contato .ct a{
+    color: #fafafa;
+    font-size: 1rem;
+    font-weight: 300;
+    transition: .5s;
+    cursor: pointer;
+}
+.footer .contato .ct a:hover{
+    color: var(--hover);
+}
+
+
+/* responsive */
+@media screen and (max-width: 991px){
+    /* nav */
+    #bx-menu {
+        display: initial;
+        color: var(--text-color);
+    }   
+    nav .navbar {
+        position: absolute;
+        top: -500px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        box-shadow: 0 3px 5px rgba(141, 141, 141, 0.1);
+        transition: 0.5s;
+        text-align: left;
+        padding-top: 10px;
+    }
+    nav .navbar.active {
+        top: 100%;
+    }
+    nav .navbar a {
+        position: relative;
+        font-size: 1.2rem;
+        padding: 1.3rem;
+        display: block;
+        background: var(--bg-color);
+        left: 80px;
+    }
+
+    /* main */
+    .main-content{
+        grid-template-columns: 1fr;
+        align-content: center;
+        align-items: center;
+    }
+    .text-wc{
+        order: 2;
+        align-items: center;
+    }
+    .text-wc h2{
+        font-size: 2.7rem;
+        text-align: center;
+    }
+    .text-wc p{
+        text-align: center;
+        word-spacing: .2rem;
+        font-size: 1.3rem;
+    }  
+    .text-wc .btn-wc .btn-how a{     
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    :root{
+        --xl-font: 3rem;
+        --md-font: 1.3rem;
+        --sm-font: 0.932rem;
+    }
+
+    /* nav */
+    nav{
+        padding: 15px 7%;
+    }
+
+    nav .logo{
+        font-size: 1.2rem;
+        line-height: 1.2rem;
+    }
+    
+    nav .logo span{
+        font-size: .80rem;
+    }
+
+    nav .navbar a{
+        left: 40px;
+    }
+}
+
+@media screen and (max-width: 670px){
+    /* navbar */
+    nav .navbar a{
+        left: 20px;
+        font-size: 1rem;
+    }
+
+     /* main */
+    .text-wc h2{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    .text-wc p{
+        text-align: center;
+        word-spacing: .3rem;
+        font-size: 1rem;
+    }  
+    .text-wc .btn-wc{
+        gap: .50rem;
+    }
+    .text-wc .btn-wc .btn-how{
+        height: 40px;
+    } 
+    .text-wc .btn-wc .btn-how a{     
+        font-size: .85rem;
+    }
+    .text-wc .btn-wc .btn-play{
+        max-width: 40px;
+        height: 40px;
+    }
+    .text-wc .btn-wc .btn-play img{
+        width: 40px;
+        height: 40px;
+    }
+}
