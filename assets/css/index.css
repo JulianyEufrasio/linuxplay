@@ -139,11 +139,10 @@ nav .navbar a:hover{
     border-color: transparent;
     transition: .5s;
 }
-
 .text-wc .btn-wc .btn-how a{     
     color: white;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 .text-wc .btn-wc .btn-play{
     width: 100%;
@@ -263,16 +262,13 @@ nav .navbar a:hover{
     nav{
         padding: 15px 7%;
     }
-
     nav .logo{
         font-size: 1.2rem;
         line-height: 1.2rem;
     }
-    
     nav .logo span{
         font-size: .80rem;
     }
-
     nav .navbar a{
         left: 40px;
     }
