@@ -6,15 +6,6 @@
     --hover: #1967FF;
 }
 
-.playnow{
-    color: var(--text-color);
-    display: grid;
-    grid-template-columns: 2fr;
-    align-items: start;
-    align-content: start;
-    margin-top: 5%;
-}
-
 .howuse{
     min-height: 100vh;
     color: var(--text-color);
@@ -24,7 +15,6 @@
     align-content: center;
     gap: 2rem;
 }
-
 .content-hw{
     display: grid;
     grid-template-columns: repeat(2, 2fr);
@@ -62,27 +52,36 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: .7rem;
+    gap: .5rem;
     text-align: justify;
 }
 .game p{
     font-size: 14px;
+    margin-bottom: 10px;
 }
-.game button{
+.game a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
     border: none;
     background-color: var(--hover);
-    height: 40px;
+    height: 45px;
     border-radius: 12px;
-}
-.game button a{
+
     color: #fafafa;
     font-weight: 500;
+    font-size: 14px;
+    transition: .3s;
 }
 .game:hover{
     background-color: #4a4a4a0b;
 }
-
+.game a:hover{
+    color: var(--hover);
+    background-color: transparent;
+    border: 1.5px solid var(--hover);
+}
 /* responsive */
 @media screen and (max-width: 991px){
    /* main */
@@ -96,7 +95,7 @@
 }
 @media screen and (max-width: 670px){
      /* main */
-    .howuse, .playnow{
+    .howuse{
         grid-template-columns: 1fr;
         margin-top: 5%;
     }
@@ -115,37 +114,6 @@
         gap: 1rem;
     }
     .game{
-        width: 100%;
-        max-width: 300px;
         padding: 14px 22px;
-        border: var(--third-color) 1px solid;
-        border-radius: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: .7rem;
-        text-align: justify;
     }
-
-    .game p{
-        font-size: 14px;
-    }
-
-    .game button{
-        width: 100%;
-        border: none;
-        background-color: var(--main-color);
-        height: 40px;
-        border-radius: 12px;
-    }
-
-    .game button a{
-        color: #fafafa;
-        font-weight: 500;
-    }
-
-    .game:hover{
-        background-color: #4a4a4a0b;
-    }
-
 }
