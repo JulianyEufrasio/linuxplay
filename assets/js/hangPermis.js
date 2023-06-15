@@ -5,7 +5,7 @@ const permissionWords = [
         trick: "Representada pelo numero 644"
     },
     {
-        permission: "rw-r--r--",
+        permission: "rwx-rw--x",
         trick: "Representada pelo numero 765"
     },
     {
