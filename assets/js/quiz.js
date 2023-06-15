@@ -106,8 +106,8 @@ const questions = [
             {answ: "rw-rw-r-x", correct: false},
             {answ: "r-xrw-r-x", correct: false},
             {answ: "rw-r-x--", correct: false},
-            {answ: "rwxrw-r-x", correct: false},
-            {answ: "rwxrwxr-x", correct: true},
+            {answ: "rwxrw-r-x", correct: true},
+            {answ: "rwxrwxr-x", correct: false},
         ]
     },
     //11
